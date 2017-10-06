@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ReactiveUI.Fody.Helpers
+namespace Reactive.Fody.Helpers
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ReactiveAttribute : Attribute

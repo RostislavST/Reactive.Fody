@@ -1,0 +1,3 @@
+// build Release versions
+
+nuget pack Reactive.Fody.nuspec -Verbosity detailed

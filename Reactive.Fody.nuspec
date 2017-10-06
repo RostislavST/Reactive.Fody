@@ -1,0 +1,26 @@
+<package>
+
+    <metadata>
+        <id>Reactive.Fody</id>
+        <version>1.0.2</version>
+        <authors>kirk</authors>
+        <owners>RostislavST</owners>
+        <projectUrl>https://github.com/RostislavST/Reactive.Fody</projectUrl>
+        <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+        <releaseNotes>This Fork works in NETStandard 1.6 projects. All other platforms removed.</releaseNotes>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Fody extension to generate RaisePropertyChange notifications for properties and ObservableAsPropertyHelper properties.</description>
+        <copyright>Copyright 2017</copyright>
+        <tags>reactiveui fody</tags>
+
+        <dependencies>
+            <dependency id="Fody" version="2.1.3" />
+            <dependency id="reactiveui" version="7.4.0" />
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="Reactive.Fody/bin/Release/netstandard2.0/Reactive.Fody.*" />
+        <file src="Reactive.Fody.Helpers/bin/Release/netstandard1.6/Reactive.Fody.Helpers.*" target="lib/netstandard1.6" />
+    </files>
+</package>

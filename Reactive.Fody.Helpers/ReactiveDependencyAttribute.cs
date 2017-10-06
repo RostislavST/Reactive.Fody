@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ReactiveUI.Fody.Helpers
+namespace Reactive.Fody.Helpers
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ReactiveDependencyAttribute : Attribute
     {
-        private readonly string _targetName;
+        readonly string _targetName;
 
         public ReactiveDependencyAttribute(string targetName)
         {

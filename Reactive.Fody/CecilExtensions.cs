@@ -4,7 +4,7 @@ using System.Linq;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
-namespace ReactiveUI.Fody
+namespace Reactive.Fody
 {
     public static class CecilExtensions
     {
@@ -21,14 +21,14 @@ namespace ReactiveUI.Fody
             return result;
         }
 
-        public static bool IsAssignableFrom(this TypeReference baseType, TypeReference type, Action<string> logger = null)
+        public static bool IsAssignableFrom(this TypeReference baseType, TypeReference type/*, Action<string> logger = null*/)
         {
-            return baseType.Resolve().IsAssignableFrom(type.Resolve(), logger);
+            return baseType.Resolve().IsAssignableFrom(type.Resolve()/*, logger*/);
         }
 
-        public static bool IsAssignableFrom(this TypeDefinition baseType, TypeDefinition type, Action<string> logger = null)
+        public static bool IsAssignableFrom(this TypeDefinition baseType, TypeDefinition type/*, Action<string> logger = null*/)
         {
-            logger = logger ?? (x => {});
+            //logger = logger ?? (x => {});
 
             Queue<TypeDefinition> queue = new Queue<TypeDefinition>();
             queue.Enqueue(type);
@@ -36,7 +36,7 @@ namespace ReactiveUI.Fody
             while (queue.Any())
             {
                 var current = queue.Dequeue();
-                logger(current.FullName);
+                //logger(current.FullName);
 
                 if (baseType.FullName == current.FullName)
                     return true;
